@@ -1,0 +1,265 @@
+body {
+	background-color:#fda;
+}
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.main {
+	width:90%;
+	height:90%;
+	background-color:white;
+	border:1px solid black;
+	margin:auto;
+	margin-top:10px;
+}
+
+.header {
+	border-bottom:2px solid black;
+	width:100%;
+	justify-content:space-around;
+	padding-top:5px;
+	padding-bottom:3px;
+	text-align:center;
+	font-size:20pt;
+}
+.detail-title{
+	text-align:left;
+	padding-left:1em;
+	flex-grow:2;
+	font-size:20pt;
+	color:#421;
+}
+
+/* ==============================
+      Company View
+ ==============================*/
+.CompanyView {
+	display:flex;
+	justify-content:space-around;
+	width:100%;
+	height:100%;
+}
+
+/* ==============================
+      Stock List
+ ==============================*/
+
+.StockList-outer {width:30%;height:100%;}
+.StockList {
+	padding:5 15 5 5;
+}
+
+.StockHdl {
+	border:1px solid gray;
+	background-color:#ffe;
+	padding:3pt;
+	margin-top:3pt;
+}
+.StockHdl .EditableField .value {width:3em;}
+.StockHdl .EditableField .popup .input { width:100%;}
+.StockHdl .EditableField .popup textarea { width:100%;}
+.StockHdl .EditableField.memo {width:auto;flex-grow:2;}
+.StockHdl .EditableField.memo .value {width:100%;}
+.StockHdl .thumb{display:inline-block; width:64px; height:64px;border:1px solid black;}
+
+/* ==============================
+      Company List
+ ==============================*/
+
+.CompanyList-outer {width:30%;height:100%;}
+.CompanyList {
+	padding:5 15 5 5;
+}
+.CompanyList .hnd {
+	border:1px solid black; 
+	border-radius:5px; 
+	margin:0;
+	width:100%;
+	padding:1em;
+	margin-top:3pt;
+}
+.CompanyList .hnd:hover {background-color:#eda;cursor:pointer;}
+.CompanyList .hnd.focus {background-color:#dda;}
+
+/* ==============================
+      Company Details
+ ==============================*/
+.CompanyDetails .name{
+	width:auto;
+	text-align:left;
+	font-size:20pt;
+	font-weight:bold;
+}
+
+.ProductCompaniesList-outer {width:30%;height:100%;}
+.ProductCompaniesList {padding:5 15 5 5;}
+
+/* ==============================
+      Editable Field
+ ==============================*/
+.EditableField {
+	font-size:12pt;
+	display:flex;
+	padding:5px; 
+	flex-direction:row-reverse;
+	align-items:center;
+	position:relative;
+}
+.EditableField .lbl {
+	cursor:pointer;
+	
+}
+.EditableField.memo .value {
+	height:42pt;
+}
+.EditableField .value {
+	width:15em; 
+	border:1px solid gray;
+	font-size:12pt;
+	padding:2pt;
+	overflow-x:hidden;
+}
+.EditableField .popup {
+	display:flex; 
+	justify-content:space-between;
+	align-items:center;
+	z-index:100;
+	border:2px solid #ffe; 
+	background-color:#ffa;
+	padding:3px;
+	position:absolute; 
+	word-break:keep-all;
+	right:0px;
+}
+.EditableField .popup .input {
+	width:15em;
+	border:1px solid gray; 
+	border-radius:0;
+	padding:2pt;
+	font-family:arial;
+	font-size:12pt; 
+}
+
+.EditableProduct {
+	width:64px;
+	height:64px;
+	border:1px solid gray;
+}
+
+/* ==============================
+      Product View
+ ==============================*/
+.ProductChooser {
+	background-color:white;
+	z-index:2;
+	border:1px solid black;
+	border-radius:5px;
+	position:fixed;
+	top:30px;
+	right:30px;
+	bottom:30px;
+	left:30px;
+}
+.ProductChooser .ProductHdl {
+	width:auto;
+	display:inline-block;
+	margin: 1em;
+}
+/* ==============================
+      Product View
+ ==============================*/
+.ProductView {
+	display:flex;
+	justify-content:space-between;
+	width:100%;
+	height:100%;
+}
+
+/* ==============================
+      Product Handle
+ ==============================*/
+
+.ProductHdl {
+	border:1px solid gray; 
+	border-radius:0; 
+	padding-left:0; 
+	margin-top:6pt;
+	width:100%;
+	}
+
+.ProductHdl.child1, .ProductHdl.child0 {margin-left:10pt;border-right:0;width:auto;}
+.ProductHdl.child1 {background-color:#fff;}
+.ProductHdl.child0, .ProductHdl {background-color:#fff;}
+.ProductHdl.child1:hover {background-color:#eee;cursor:pointer;}
+.ProductHdl.child0:hover , .ProductHdl:hover {background-color:#ddd;cursor:pointer;}
+.ProductHdl .thumb{display:inline-block; width:64px; height:64px;border:1px;}
+.ProductHdl .lbl {margin:2pt; align-self:center; font-size:12pt;}
+
+/* ==============================
+      Product Details
+ ==============================*/
+.ProductDetails {
+	display:flex;
+	flex-direction:column;
+	align-items:end;
+}
+.ProductDetails .name {
+	font-size:20pt;
+	font-weight:bold;
+}
+.lbl {word-break:keep-all;}
+
+.button.search {width: 8em;}
+.button {
+	background-color:white; 
+	border:1px solid gray;
+	border-radius:5px;
+	padding:3px;
+	line-height:15pt;
+	font-size:14pt;
+}
+.button:hover {cursor:pointer; background-color:#ddd;}
+.button.thin {
+	width:100%;
+	font-size:14pt;
+	line-height:10pt;
+	text-align:center;
+}
+
+#glass {
+	display:none;
+	position:fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	background-color:black;
+	opacity:0.5;
+}
+
+.faround {justify-content:space-around;}
+
+.fcenter {	align-items:center;}
+
+.reverse {
+	flex-direction:row-reverse;
+	align-items:center;	
+}
+
+
+
+.EditableImage {
+	position:relative;
+	width:256px;
+	height:256px;
+	margin:5px;
+	border:1px solid gray;
+	
+	display:block;
+}
+
+	
+
